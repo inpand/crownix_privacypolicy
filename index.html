@@ -173,12 +173,12 @@
         <tr>
           <td><strong>Internet Access</strong></td>
           <td><code>android.permission.INTERNET</code></td>
-          <td>Connects to our match gateway solely to relay chess moves in online private room multiplayer matches.</td>
+          <td>Reserved for future online room multiplayer features. All current gameplay modes run 100% offline on your device.</td>
         </tr>
         <tr>
           <td><strong>Network State</strong></td>
           <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
-          <td>Checks network connectivity to alert you when online multiplayer is unavailable offline.</td>
+          <td>Checks network connectivity to display offline status indicators.</td>
         </tr>
         <tr>
           <td><strong>Vibration</strong></td>
@@ -188,12 +188,11 @@
       </tbody>
     </table>
 
-    <h2>4. Online Multiplayer Data Transmission</h2>
-    <p>When you create or join a private multiplayer room:</p>
+    <h2>4. Offline Operation & Future Online Features</h2>
+    <p>Crownix is designed primarily as a standalone, on-device chess application:</p>
     <ul>
-      <li>The App communicates with our game server using encrypted WebSockets (WSS/TLS).</li>
-      <li>Transmitted data is limited strictly to transient game packets: room code, move coordinates (e.g., <code>e2e4</code>), and game clocks.</li>
-      <li>No personal data, user chat logs, or persistent hardware identifiers are collected or stored. Multiplayer match states are ephemeral and purged immediately when the match finishes or the room is closed.</li>
+      <li><strong>Current Offline Experience:</strong> All AI opponents, 50 Kingdom stages, Daily Puzzles, and two-player matches execute entirely on your device without transmitting data over the internet.</li>
+      <li><strong>Future Online Updates:</strong> If online private room matches are enabled in future updates, data transmission will be strictly limited to transient move coordinates (e.g., <code>e2e4</code>) and clock timers over encrypted connections. No user accounts, chat logs, or personal profiles will ever be collected or stored.</li>
     </ul>
 
     <h2>5. Third-Party Services & Ad Networks</h2>
